@@ -1,0 +1,21 @@
+body {
+    margin-left: 2rem;
+}
+h1 {
+    margin-top: 2rem;
+}
+body, input {
+font-family: 'Poppins', sans-serif
+}
+#hours {
+margin-bottom: 1rem;
+}
+.form-control {
+width: 14rem;
+}
+p {
+padding-top: 1rem;
+}
+#mybutton {
+height: 3rem;
+}
