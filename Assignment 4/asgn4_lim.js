@@ -1,27 +1,61 @@
-var $ = function (id) {
+var $ = function(id) {
 	return document.getElementById(id);
-}
-var beatlesArray = ""; //global declaration of array
+};
 
-var showList = function () {
-    var beatlesArray = document.getElementsByTagName('img');
+var beatlesArray;
+var beatleString = "";
+var processArray = function() {
+	var counter = 1;
+	for (var i = 0; i <= beatlesArray.length - 1; i++) {
+		if (i !== beatlesArray.length - 1) {
+			beatleString += counter + ". " + beatlesArray[i] + ", ";
+		} else {
+			beatleString += counter + ". " + beatlesArray[i];
+		}
+		counter++;
+	}
+	$("list").innerHTML = beatleString;
+};
 
-    for (i = 1; i <= beatlesArray.length; i++) {
-        myBeatles += i + "." + beatlesArray[i].value + ",";
-    }
-    $("list").innerHTML = myBeatles;
-}
+var loadFunction = function() {
+	beatlesArray = [];
 
-$("john").border = "0px";
-$("paul").border = "0px";
-$("george").border = "0px";
-$("ringo").border = "0px";
+	$("john").onclick = function() {
+		$("ringo").border = "0px";
+		$("paul").border = "0px";
+		$("george").border = "0px";
+		this.border = '4px';
+		this.style.color = 'yellow';
+		beatlesArray.push("John");
+	};
+	$("paul").onclick = function() {
+		$("john").border = "0px";
+		$("ringo").border = "0px";
+		$("george").border = "0px";
+		this.border = '4px';
+		this.style.color = 'yellow';
+		beatlesArray.push("Paul");
+	};
+	$("george").onclick = function() {
+		$("john").border = "0px";
+		$("paul").border = "0px";
+		$("ringo").border = "0px";
+		this.border = '4px';
+		this.style.color = 'yellow';
+		beatlesArray.push("George");
+	};
+	$("ringo").onclick = function() {
+		$("john").border = "0px";
+		$("paul").border = "0px";
+		$("george").border = "0px";
+		this.border = '4px';
+		this.style.color = 'yellow';
+		beatlesArray.push("Ringo");
+	};
 
-this.border = '4px';
-this.style.color = 'yellow';
+	
+	$("showlist").onclick = processArray;
+};
 
-window.onload = function ()
-{
-    beatlesArray = new Array();
-	$("showlist").onclick = showList;
-}
+window.onload = loadFunction;
+

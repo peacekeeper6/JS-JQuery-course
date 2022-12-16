@@ -1,0 +1,61 @@
+body {
+	background-color: lemonchiffon;
+}
+
+h1 {
+	color: blue;
+}
+
+#tabs {
+	background-color: lightgray;
+}
+
+#signupmessage {
+	color: green;
+	font-weight: bold;
+}
+
+
+.draggable {
+	background-color: white;
+	justify-content: center;
+    width: 125px;
+	height: 125px;
+	padding: 5px;
+    margin: 15px;
+	float: left;
+}
+
+.droppable {
+    font-weight: bold;
+	width: 200px;
+	height: 350px;
+	background-color: lightgray;
+	justify-content: center;
+    padding: 5px;
+	float: left;
+	}
+	
+.dropped {
+    font-weight: bold;
+	width: 200px;
+	height: 350px;
+	background-color: floralwhite;
+	justify-content: center;
+    padding: 5px;
+	float: left;
+}
+
+#feelingsWindow {
+	border: 1px solid black;
+}
+
+#feelings {
+	padding-left: 0.5em;
+	font-size: 24pt;
+	font-weight: bold;
+}
+	
+.error {
+	color: red;
+}
